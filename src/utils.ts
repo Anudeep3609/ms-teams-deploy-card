@@ -52,7 +52,6 @@ export function submitNotification(webhookBody: WebhookBody) {
   const webhookBodyJson = JSON.stringify(webhookBody, undefined, 2);
 
   return fetch(webhookUri, {
-    method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
