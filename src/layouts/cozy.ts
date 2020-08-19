@@ -32,7 +32,7 @@ export function formatCozyLayout(
   // Set environment name
   const environment = getInput("environment");
   if (environment !== "") {
-    labels += ` \`ENV:${environment.toUpperCase()}\``;
+    labels += ` \`EN:${environment.toUpperCase()}\``;
   }
 
   // Set themeColor

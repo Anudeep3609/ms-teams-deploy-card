@@ -23,7 +23,7 @@ export function formatCompactLayout(
   // Set environment name
   const environment = getInput("environment");
   if (environment !== "") {
-    labels += ` \`ENV:${environment.toUpperCase()}\``;
+    labels += ` \`E:${environment.toUpperCase()}\``;
   }
 
   // Set themeColor

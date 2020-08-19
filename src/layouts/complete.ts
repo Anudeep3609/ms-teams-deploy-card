@@ -59,11 +59,7 @@ export function formatCompleteLayout(
 
   // Set section facts
   section.facts = [
-    new Fact(
-      "Event type:",
-      "`" + process.env.GITHUB_EVENT_NAME?.toUpperCase() + "`"
-    ),
-    new Fact("Status:", 'Failed'),
+    
     new Fact(
       "Commit message:",
       escapeMarkdownTokens(commit.data.commit.message)
@@ -97,7 +93,7 @@ export function formatCompleteLayout(
     section.facts.splice(
       1,
       0,
-      new Fact("Environment:", `\`${environment.toUpperCase()}\``)
+      new Fact("Environ11ment:", `\`${environment.toUpperCase()}\``)
     );
   }
 
