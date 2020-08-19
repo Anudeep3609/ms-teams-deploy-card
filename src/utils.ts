@@ -56,7 +56,6 @@ export function submitNotification(webhookBody: WebhookBody) {
     headers: {
       "Content-Type": "application/json",
     },
-    body: webhookBodyJson,
   })
     .then((response: Response) => {
       setOutput("webhook-body", webhookBodyJson);
@@ -68,7 +67,7 @@ export function submitNotification(webhookBody: WebhookBody) {
 
 export async function formatAndNotify(
   state: "start" | "exit",
-  conclusion = "Failure",
+  conclusion = "in_progress",
   elapsedSeconds?: number
 ) {
   let webhookBody: WebhookBody;
