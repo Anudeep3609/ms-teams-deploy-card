@@ -68,7 +68,7 @@ export function submitNotification(webhookBody: WebhookBody) {
 
 export async function formatAndNotify(
   state: "start" | "exit",
-  conclusion = "in_progress",
+  conclusion = "Failure",
   elapsedSeconds?: number
 ) {
   let webhookBody: WebhookBody;
